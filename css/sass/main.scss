@@ -1,0 +1,25 @@
+//use not working with live compiler watch
+// use "....." as *  (for using var)
+@import "./extra";
+
+.mahmoud{
+    color: $main-color;
+}
+
+.anas{
+    $alt-color:blue;
+    color: $alt-color;
+}
+
+.yusef{
+    color: $alt-color;
+}
+
+.ali{
+    $alt-color:tomato !global;
+    color: $alt-color;
+}
+
+.hasan{
+    color: $alt-color;
+}

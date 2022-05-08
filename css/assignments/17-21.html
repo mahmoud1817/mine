@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-21</title>
+</head>
+<style>
+    *{
+        font-size: 40px;
+        text-align: center;
+    }
+    div.one{
+        text-transform: capitalize;
+        text-shadow: 1px 1px orange,2px 2px blue ,3px 3px brown;
+    }
+
+    p.one{text-transform: uppercase;}
+    p.two{text-transform: capitalize;}
+    p.three{text-transform: lowercase;}
+
+    #div{
+        color: whitesmoke;
+        background-color: black;
+        width: 400px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    a{
+        text-decoration: none;
+        text-transform: capitalize;
+        background-color: teal;
+        padding: 20px;
+        color: white;
+        position: relative;
+    }
+    a::before{
+        content: "";
+        position: absolute;
+        background-color: blue;
+        color:blue;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+    }
+</style>
+<body>
+    <div class="one">elzero web school</div>
+
+    <p class="one">elzero Web school</p>
+    <p class="two">elzero Web school</p>
+    <p class="three">elzero Web school</p>
+
+    <div id="div">
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+        my name is mahmoud 
+    </div>
+
+    <a href="https://elzero.org">elzero</a>
+</body>
+</html>

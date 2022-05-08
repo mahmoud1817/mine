@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>68-73</title>
+</head>
+<style>
+/* h1{
+    width: 150px;
+    margin: 50px auto;
+    background-color: orange;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding:40px;
+    text-align: center;
+    position: relative;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    transform: skew(10deg, 10deg);
+    z-index: -1;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    transform: skew(-10deg, -10deg);
+    z-index: -1;
+} */
+
+/* h1{
+    width: 150px;
+    margin: auto;
+    background-color: lightseagreen;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: end;
+    padding: 40px;
+    position: relative;
+}
+
+h1::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    width: 10px;
+    transform: skewX(20deg);
+}
+
+h1::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: -20px;
+    height: 100%;
+    width: 50px;
+    transform: skewX(20deg);
+} */
+
+/* div{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    background-color: lightslategray;
+    border-bottom: 5px solid;
+    margin: 100px auto;
+    position: relative;
+}
+div::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: black;
+    top: -70px;
+    left: 30px;
+    border: 5px solid white;
+    transform: rotate(45deg);
+}
+div::after{
+    content: "Elzero";
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+} */
+
+div{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    transition: 1s;
+}
+
+div::before{
+    content: "Back";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transform: rotateY(180deg);
+}
+
+div:hover{
+    transform: rotateY(180deg);
+}
+
+/* div:hover::after{
+    transform: rotateY(90deg);
+    transition: 1s;
+} */
+
+div::after{
+    content: "Front";
+    position: absolute;
+    color: white;
+    left: 0;
+    top: 0;
+    font-size: 30px;
+    background-color: deeppink;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 6.5;
+    backface-visibility: hidden;
+}
+</style>
+<body>
+    <h1>Elzero</h1>
+    <div></div>
+</body>
+</html>

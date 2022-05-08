@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script src="train.js"></script>
+</head>
+<body>
+
+    <div class="name">my name is mahmoud</div>
+    <div id="another">my name is anas</div>
+    <div id="first">hello mahmoud</div>
+    <div id="second">hasan</div>
+    <div id="third"></div>
+    
+    <script>
+
+        var name="mahmoud"
+        name2="yusuf";
+        var some = ` hello 
+        my friend`; 
+        var thing = 10;
+        var second = document.getElementById('second').innerHTML; //[object HTMLDivElement]
+
+        first.innerHTML="hey mahmoud"; //direct access to the id
+
+        document.write(`hello my name is 'mahmoud'  and \"anas\"
+        and ${name2} and ` + second + " " + `${4*1}`);
+        document.write("<br>");
+        document.write("<pre>\n</pre>");
+        document.write('___after')
+        document.write(some);
+
+        console.error("hey man!");
+        console.table(["mahmoud","anas","yusef"]);
+        console.log('hello man');
+        console.log(another);
+        console.log(name2);
+        console.log(+"100");console.log(-"40");
+        console.log(Number('90')); console.log(+""*70);
+        console.log(10+"30"+true+20+30); //string
+        console.log(+10+"30"+true); //string
+        console.log(+10+thing+true); //number
+        console.log(thing+=10);
+        console.log(1_000_000 + 1e6 + 10**6);
+        console.log((200).toString());
+        console.log((200.109).toFixed(2));
+        console.log(parseFloat("500.10 mahmoud"));
+        console.log(parseInt("500.10 mahmoud"));
+        console.log(Number.isInteger(900)); //"mahmoud"
+        console.log(Number.isNaN("mahmoud" * 20)); //true,output=NaN
+        console.log(Math.round(99.3));
+        console.log(Math.ceil(99.3));
+        console.log(Math.floor(99.3));
+        console.log(Math.min(99,3));
+        console.log(Math.max(99,3));
+        console.log(Math.pow(99,3));
+        console.log(Math.random());
+        console.log(Math.trunc(99.6));
+        console.log(name2[2]);
+        console.log(name2.charAt(2)); //return nothing if not available
+        console.log(name2.length);
+        console.log(name2.trim());
+        console.log(name2.toUpperCase());
+        console.log(name2.toLowerCase());
+        console.log(name.indexOf("mahmoud",2)); //;astIndexOf , -1 not available
+        console.log(name.slice(0,2)); // end not included
+        console.log(name.repeat(3));
+        console.log(name.split()); //split into array (list)
+        console.log(name.split(""));
+        console.log(name.split(" "));
+        console.log(name.split("m",1));
+        //less than 0 = 0 , start with smaller = swap , if end with greater = no prop
+        console.log(name.substring(0,18));
+         //start - count , if no. given greater = nothing 
+        console.log(name.substr(0,9));
+        console.log(name.includes('m',2));
+        console.log(name.startsWith('m',2));
+        console.log(name.endsWith('m',2));
+
+        console.log("hey my %cdear %cmahmoud","color:blue;font-size:large","color:green;font-size:larger");
+        
+    </script>
+</body>
+</html>

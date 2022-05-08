@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-12</title>
+</head>
+<style>
+    div:not(.four){
+        box-sizing: border-box;
+        display: inline-block;
+        border: 5px solid;
+        background-color: #eee;
+        min-width: 150px; height: 100px;
+        outline: 5px solid black;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 90px;
+        font-size: 36px;
+    }
+    
+    div.one{border-color: red;}
+    div.two{border-color:blue green;}
+    div.three{border-style:dashed;border-color: red green blue yellow;}
+
+    span{
+        display: block;
+        margin-top: 50px;
+        background-color: #eee;
+        padding: 10px;
+        position: relative;
+        }
+    span.one::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: violet;
+    height: 25px;
+    left: 3px;
+    top: 7px;
+    }
+    span.two{visibility: hidden;}
+    span.three::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: teal;
+    height: 25px;
+    left: 3px;
+    top: 7px;
+    }
+
+    .four{
+        background-color: #eee;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .four span{
+        height: 20px;
+        border-left: 5px solid red;
+        margin: 0;
+        padding: 0 -10px;
+    }
+</style>
+<body>
+    <div class="one">shape 1</div>
+    <div class="two">shape 2</div>
+    <div class="three">shape 3</div>
+
+    <span class="one">important note</span>
+    <span class="two">important note</span>
+    <span class="three">important note</span>
+
+    <div class="four"> <span> important note </span></div>
+
+</body>
+</html>

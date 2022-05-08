@@ -1,0 +1,52 @@
+
+$main-color: lightgreen;
+$alt-color : lightblue;
+$value     : true;
+$name      :"mahmoud";
+$company   :"mysite";
+$num       : 0;
+$colors    : red green blue;
+
+extra{
+    font: bold;
+    .child{
+        font: bolder ;
+    }
+    > p{
+        color: green;
+    }
+    &.pExtra{
+        background-color: blue;
+    }
+    &:hover{
+        color:red
+    }
+    .short{
+        font: {
+            size: 10px;
+            weight:bold;
+        }
+    }
+}
+
+.aside{
+    @extend .parent;
+}
+
+%placeholder{
+    color:blue;
+    background-color: green;
+}
+
+@mixin folan($var) {
+    border: $var solid red;
+}
+
+@mixin folanen {
+    font-size: 50px;
+}
+
+.something{
+    @include folan();
+    @include folanen;
+}

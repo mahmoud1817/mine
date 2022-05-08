@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33-37</title>
+</head>
+<style>
+    /* div{
+        height: 100px;
+        align-items: center;
+        text-align: center;
+    }
+    div:first-of-type{
+        background-color: rgba(238, 238, 238, 0.822);
+    }
+    div:empty{
+        background-color: red;
+    }
+    div:last-of-type{
+        background-color: #eee;
+    } */
+
+    /* div{
+        height: 150px;
+        width: 80%;
+        background-color: #eee;
+        text-align: center;
+        align-items: center;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: 10%;
+        font-size: 36px;
+    }
+    div::first-letter{
+        display: inline-block;
+        background-color: #ff0000;
+        color: white;
+        padding: 0 10px 5px;
+        font-size: 60px;
+        left: 100px;
+        margin-left: -30px;
+        line-height: 2;
+    }
+
+    p{
+        background: #eee;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    p::before{
+        content: attr(data-person);
+        position: absolute;
+        left: 20px;
+        background: inherit;
+        width: 75px;
+        height: 50px;
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    p::after{
+        content: "";
+        background: pink;
+        width: 5px;
+        height: 50px;
+        position: absolute;
+        left: 160px;
+    }
+    p::{
+        content: "";
+        background: transparent;
+        width: 10px;
+        position: absolute;
+        left: 86px;
+        border: 11px solid;
+        border-color: transparent pink transparent transparent;
+    }
+
+    body::after{
+        content: "";
+        background-color: transparent;
+        width: 140px;
+        top: 53px;
+        left: 1px;
+        position: absolute;
+        border: 10px solid;
+        border-color: transparent pink transparent transparent;
+}
+    body::before{
+        content: "";
+        background-color: transparent;
+        width: 140px;
+        top: 110px;
+        left: 1px;
+        position: absolute;
+        border: 10px solid;
+        border-color: transparent pink transparent transparent;
+        }
+
+        html::after{
+            content: "";
+            background-color: transparent;
+            width: 140px;
+            top: 170px;
+            left: 1px;
+            position: absolute;
+            border: 10px solid;
+            border-color: transparent pink transparent transparent;
+        }
+         */
+p{
+    background-color: #eee;
+    padding: 30px;
+    counter-increment: mahmoud;
+    position: relative;
+    margin: 10px auto;
+    width: 50%;
+}
+
+p::before{
+    background-color: orangered;
+    width: 50px;
+    height: 31px;
+    padding: 10px 0;
+    left: -28px;
+    position: absolute;
+    top: 14px;
+    content: counter(mahmoud);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+p::after{
+    background-color: orangered;
+    content: "";
+    width: 5px;
+    height: 77px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+    
+</style>
+<body>
+<!-- <div>One</div>
+<div></div>
+<div>Three</div> -->
+=============================
+<!-- <div>1 Hello, Welcome To Elzero Web School</div> -->
+==================================================
+<!-- <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+<p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+<p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+========================================
+-->
+
+<p>This Is Very Very Long Product Title</p>
+<p>This Is Very Very Long Product Title</p>
+<p>This Is Very Very Long Product Title</p>
+<p>This Is Very Very Long Product Title</p>
+<p>This Is Very Very Long Product Title</p>
+<p>This Is Very Very Long Product Title</p>
+
+
+</body>
+</html>

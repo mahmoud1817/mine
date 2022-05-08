@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<style>
+    body{counter-reset: folan 10;}
+    ul{list-style: none;}
+    li::before{counter-increment: folan; content: 'F->' counter(folan); margin-right: 10px;}
+
+    p{counter-increment: new;}
+    p:after{content: counter(new);}
+
+    .parent{counter-increment: another;}
+    .child::before{content: counter(another);}
+</style>
+<body>
+    
+    <ul>
+        <li>mahmoud</li>
+        <li>anas</li>
+        <li>yusef</li>
+    </ul>
+
+        <p>mahmoud</p>
+        <p>mahmoud</p>
+        <p>mahmoud</p>
+
+        <div class="parent">
+            <div class="child">anas</div>
+        </div>
+        <div class="parent">
+            <div class="child">anas</div>
+        </div>
+        <div class="parent">
+            <div class="child">anas</div>
+        </div>
+
+</body>
+</html>

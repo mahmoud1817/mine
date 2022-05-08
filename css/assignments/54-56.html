@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>54-56</title>
+</head>
+<style>
+    /* div{
+        width: 600px;
+        height: 50px;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        background: linear-gradient(to right,orangered 20%,blue 20%,green 40%,green 60%,red 60%,red 80%, purple 80%);
+    }
+    div::before{
+        content: "lzero";
+        text-align: center;
+        position: absolute;
+        font-size: 30px;
+        width: 98%;
+        height: 80%;
+        left: 1%;
+        top: 10%;
+        background: white;
+        font-weight: bold;
+    } 
+    div::after{
+        content: "E";
+        position: absolute;
+        color: red;
+        font-size: 30px;
+        font-weight: bolder;
+        left: calc(-6% + 2px);
+        top: 9%;
+        width: 98%;
+        height: 80%;
+        text-align: center;
+    } */
+    div{
+        padding: 10px;
+        height: 30px;
+        background-color: #eee;
+        margin-bottom: 5px;
+        caret-color: orangered;
+        position: relative;
+    }
+    div::before{
+        content: "";
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to left,orangered 50%,green 50%);
+    }
+    .two,.three{color: gray;}
+</style>
+<body>
+    <!-- <div>Elzero</div> -->
+    <div class="one" contenteditable="true">Elzero</div>
+    <div class="two" contenteditable>Two</div>
+    <div class="three" contenteditable>Three</div>
+</body>
+</html>

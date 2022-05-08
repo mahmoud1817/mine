@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightSpinner</title>
+    <link rel="stylesheet" href="../css/LS.css">
+</head>
+<style>
+    body{margin: 0; padding: 0; background-color: black;box-sizing: border-box;}
+
+.box{position: relative;width: 100%; height: 100vh; overflow: hidden;}
+
+.line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 250vh;
+    box-shadow: 
+    inset -10px 0 40px rgba(0, 0, 0, 1),
+    inset 10px 0 10px rgba(0, 0, 0, 1),
+    inset -10px 0 10px rgba(255, 255, 255, 0.25),
+    inset 10px 0 10px rgba(255, 255, 255, 0.25),
+    0 0 40px rgba(0, 0, 0, 1);
+}
+
+@keyframes move1{
+    0%   {background-position: 0 0;}
+    100% {background-position: 35px -35px;}
+}
+
+@keyframes move2{
+    0%   {background-position: 35px -35px;}
+    100% {background-position: 0 0;}
+}
+
+.line1{
+    background: #222 radial-gradient(brown 10px, black 10px, black 14px, transparent 14px);
+    background-size: 35px 35px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 11;
+    animation: move1 2s linear infinite;
+}
+
+.line2{
+    background: #222 radial-gradient(lightblue 10px, black 10px, black 14px, transparent 14px);
+    background-size: 35px 35px;
+    transform: translate(-50%, -39%) rotate(45deg);
+    z-index: 3;
+    animation: move2 2s linear infinite;
+}
+
+.line3{
+    background: #222 radial-gradient(lightgreen 10px, black 10px, black 14px, transparent 14px);
+    background-size: 35px 35px;
+    transform: translate(-50%, -62%) rotate(45deg);
+    z-index: 3;
+    animation: move2 2s linear infinite;
+}
+
+.line4{
+    background: #222 radial-gradient(wheat 10px, black 10px, black 14px, transparent 14px);
+    background-size: 35px 35px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 12;
+    animation: move2 2s linear infinite;
+}
+
+.line5{
+    background: #222 radial-gradient(violet 10px, black 10px, black 14px, transparent 14px);
+    background-size: 35px 35px;
+    transform: translate(-50%, -38%) rotate(-45deg);
+    z-index: 10;
+    animation: move1 2s linear infinite;
+}
+
+.line6{
+    background: #222 radial-gradient(orange 10px, black 10px, black 14px, transparent 14px);
+    background-size: 35px 35px;
+    transform: translate(-50%, -62%) rotate(-45deg);
+    z-index: 10;
+    animation: move1 2s linear infinite;
+}
+
+
+</style>
+<body>
+    <div class="box">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="line line4"></div>
+        <div class="line line5"></div>
+        <div class="line line6"></div>
+    </div>
+</body>
+</html>

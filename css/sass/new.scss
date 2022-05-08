@@ -1,0 +1,21 @@
+@use "./extra" as *;
+@import url(./start.scss);
+
+$a: blue;
+$g: green !global;
+
+.parent{
+    >.direct{
+        color:$a;
+    }
+    +p{
+        color:$b;
+    }
+    &.pc{
+        color: yellow;
+    }
+    &:hover{
+        color:red;
+    }
+}
+

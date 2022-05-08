@@ -1,0 +1,36 @@
+@import "./extra";
+//sass comment
+/*css comment (not minified)*/
+///......
+
+.page{
+    @if $name == "mahmoud" {
+        border: 2px solid green;
+    } @else if $name == "anas" {
+        border: 3px dashed blue;
+    } @else {
+        @error "hey u!!"
+    }
+
+    color: if($value,$main-color,null);
+}
+
+.landing-#{$company}-#{unique-id()}{
+    font-weight: bold;
+}
+
+@for $i from 1 through 10{
+    .mahmoud-#{1+$num}{
+        font-size: 1+$num;
+    }
+    $num: $num + 1;
+}
+
+@each $clr in $colors {
+    .#{$clr}-class-#{unique-id()}{
+        background-color: $clr;
+    }
+}
+//$clr1 , $clr2 in $dic ... $clr , $font , $size in $tripletList
+
+

@@ -1,0 +1,65 @@
+include var
+doctype html
+html
+    include style.pug
+    body 
+        div= "this is <b>unbuffered</b> code"
+        div!= "this is <b>buffered</b> code"
+        div
+            span my name is anas 
+            +mymix("ya sa7by")
+        p: a a link
+        button.mybtn this is a button
+        |
+        |  just a text 
+        |    
+        . 
+            hello man this is a text
+        //this is a single-line comment
+            now it is a multiple-line comment
+        //-pug special comment
+    div(
+        class="mahmoud " + name,
+        id="anas",
+        style={'color':'red'}
+        ) hello there
+    p(
+        class="folan",
+        id="hasan",
+        style={"background-color":'blue'}
+    )    bro!
+    - for(var x=0;x<10;x++)
+        div hello man #{x}
+    - m = 0
+        while m < 12
+            - m+=10
+                p hello my man #{m}
+    - n = 0
+        while n < 15
+            li=n++ + " hello bro " + n
+    - var mylist = []
+    each first ,  second in mylist 
+        li= second + ':' + first
+    else 
+        div='what is this man'
+    li hello my dear #{name}
+    p hello !{sName} mybro
+    p hello #{sName} mybro
+    div أهلا #[b يا صاحبي] محمود
+    
+    block mytry 
+        .try hello bro :) 
+    
+    block plus 
+        . 
+            add here man
+    - var num = 0
+    case num 
+        when 1
+            p positive :)
+        when 0
+            p you have a whole big zero 
+        default 
+            p what is this?
+        
+    include script.pug

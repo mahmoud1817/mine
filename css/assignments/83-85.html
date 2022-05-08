@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>83-85</title>
+</head>
+<style>
+    /* @media print {
+        div{font-size: 40px;}
+    } */
+    
+    @media (max-width:767px){
+        .parent{
+        display: block;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .parent div{
+            background-color: #fafafa;
+            padding: 10px 40px;    
+            margin: 10px;
+        }
+
+        h1{font-weight: bold;}
+    
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px){
+        .parent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+        .parent div{
+            background-color: #fafafa;
+            padding: 10px 40px;    
+            margin: 10px;
+            width: 35%;
+        }
+        h1{color: red;}
+    }
+    @media (min-width:1200px) {
+        .parent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .parent div{
+        background-color: #fafafa;
+        padding: 10px 40px;        
+    }
+    h1{color: lightseagreen;}
+    }
+
+</style>
+<body>
+    <!-- <div class="assign-one">Elzero Web School</div> -->
+    <div class="parent">
+        <div class="one">
+            <h1>Product One</h1>
+            <p>this is product one</p>
+        </div>
+        <div class="two">
+            <h1>Product two</h1>
+            <p>this is product two</p>
+        </div>
+        <div class="three">
+            <h1>Product three</h1>
+            <p>this is product three</p>
+        </div>
+        <div class="four">
+            <h1>Product four</h1>
+            <p>this is product four</p>
+        </div>
+    </div>
+</body>
+</html>

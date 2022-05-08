@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>65-67</title>
+</head>
+<style>
+
+/* div{
+    width: 300px;
+    height: 200px;
+    margin: 10px auto;
+    background-color: #fafafa;
+    color: blue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+div::before{
+    content: "";
+    background-color: violet;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: skew(-5deg,5deg);
+    z-index: -1;
+}
+
+div::after{
+    content: "";
+    background-color: lightskyblue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: skew(5deg,-5deg);
+    z-index: -2;
+} */
+
+div{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: #fafafa;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+}
+
+div::before{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid ;
+    border-color: violet violet violet transparent;
+    transform: scale(1,1);
+    transition: .5s;
+}
+div::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid ;
+    border-color: blue transparent blue blue;
+    transform: scale(1.1,1.1);
+    transition: .5s .5s;
+}
+
+div:hover::before{
+    transform:scale(1,1) rotate(360deg);
+}
+
+div:hover::after{
+    transform:scale(1.1,1.1) rotate(360deg);
+}
+
+<body>
+    
+    <div>Elzero</div>
+    
+</body>
+</html>

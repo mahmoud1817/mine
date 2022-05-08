@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css ref</title>
+</head>
+
+<style>
+
+    *{
+        caret-color: red;
+    }
+
+    ::selection{
+        color: blue;
+    }
+
+    .thing{
+        height: 500px;
+        width: 500px;
+        padding: 5px;
+        margin-trim: 20px;
+
+        /* BORDER */
+        border: 10px dotted lightgreen;
+        border-radius: 30px;
+        border-collapse: collapse;
+        border-spacing: 10px;
+        border-image-source: linear-gradient(gold,black); /*url(../res/images/rabbit.jpg); */
+        border-image-width: 50px;
+        border-image-slice:1 ;/*  fill ; 30px 20px 10px 5px !px*/
+        border-image-repeat: stretch;
+        border-image-outset: 10px;
+
+        margin: auto;
+        outline: 5px solid red;
+
+        /* BACKGROUND */
+        background-color: lightblue;
+        background-image: url(../res/images/time.jpg);
+        background-repeat: no-repeat;
+        background-position: center center ;
+        background-attachment: scroll;
+        background-size:100px 100px;
+        background-clip: content-box;
+        background-blend-mode: overlay;
+        text-align: center;
+    }
+
+    p{
+        background-color: chocolate;
+        /*width:fit-content; blocks the align */
+        width: 500px;
+        /* overflow: auto; */
+        display: block;
+
+        /* TEXT */
+        text-decoration: overline;
+        letter-spacing: 10px;
+        word-spacing: 3px;
+        line-height: 2;
+        text-indent: 10px;
+        text-decoration-color: blue;
+        text-align: right;
+        text-align-last: center;
+        text-decoration-style: dashed;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: 5px;
+
+        text-overflow: ellipsis;
+
+        text-anchor: start; /* point of placing anchor */
+        /* text-decoration-skip: spaces; not supported */
+        /* text-combine-upright: digits 2; for japanese/chinese */
+        /* text-size-adjust: none ; something about adjusting in screens */
+        /* text-emphasis-color: green;
+        text-emphasis-style: "*"; unsupported*/
+        /* text-justify: newspaper; not supported*/
+
+    }
+
+    span{
+        writing-mode: vertical-lr;
+
+        /* TEXT */
+        text-decoration: underline;
+        text-orientation: upright; /* upright = v , mixed = h*/
+        text-underline-position: under; /* more below than normal */
+        text-rendering: auto; /*normal without optimization*/
+        text-justify: newspaper;
+        text-transform: capitalize;
+        text-shadow: 0px 0px 2px blue;
+        font-size: 30px;
+    }
+
+    em{
+
+        font-size: 50px;
+    }
+
+    a{
+        border: inherit;
+        font-size: inherit;
+    }
+
+    div{
+        border: 2px solid tomato;
+        font-size: 30px;
+    }
+
+    anas{
+        background-color: greenyellow;
+        display: block;
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    
+    .flex{
+        display: flex;
+        /* flex-direction: column;
+        flex-wrap: nowrap; */
+        flex-flow: row wrap;
+        justify-content: space-between; /* flex-start/end  center*/
+        align-content: flex-start ;
+        align-items: flex-end;
+    }
+    
+    .flex div{
+        display: flex;
+        width: 25%;
+        float: left;
+        direction: rtl; 
+        flex-grow: 1;/* grow shrink basis */
+        order: 2;
+        flex-basis: auto;
+        align-self: stretch;
+        pointer-events: none;
+    }
+
+    img{
+        width: 200px;
+        filter: blur(10px);
+        filter: brightness(0.3);
+        filter: contrast(200%);
+        filter: drop-shadow(10px 10px 10px lightblue);
+        filter: grayscale(30%);
+        filter: hue-rotate(90deg);
+        filter: invert(30%);
+        filter: opacity(25%);
+        filter: saturate(30%);
+        filter: sepia(60%);
+    }
+
+    img:hover{
+        filter: blur(0);
+    }
+
+
+    .first{
+        background:linear-gradient(to right, blue 15% , green 30% , red 65%,black 90%);
+    }
+
+    .second{
+        background: radial-gradient(blue,green,red,black);
+    }
+
+    .third{
+        background: conic-gradient(blue 45deg,green 130deg,red 220deg,black 290deg);
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        /* repeat(3,150px) % auto 1fr 2fr * repeat(auto-fill,200px)*/
+        grid-template-rows: minmax(100,200) 1fr;
+        gap: 10px 10px;
+        grid-template-areas: "mahmoud mahmoud anas ""yusef yusef yusef";
+        grid-column: 2 / span 3 ;
+        grid-row: 1/3;
+        grid-area: 2 / 2 / 4 / 4;
+    }
+
+    h5{grid-area: mahmoud;}
+
+    h6{grid-area: anas;}
+
+
+</style>
+
+<body>
+
+    <!-- <marquee><div class="thing">this is a thing</div></marquee> -->
+    <p title="my name is mahmoud my name is mahmoud my name is mahmoud my name is mahmoud"> my name is mahmoud my name is mahmoud my name is mahmoud my name is mahmoud </p>
+    <input type="text">
+    <span>just a span</span>
+    <em>this is something</em>
+
+    <div> 
+        <a href="old.html">old</a>
+    </div>
+
+    <div class="flex">
+        <div>mahmoud</div>
+        <div>anas</div>
+        <div>yusef</div>
+        <div>hasan</div>
+        <div>ali</div>
+    </div>
+
+    <div class="grid">
+        <div>mahmoud</div>
+        <div>anas</div>
+        <div>yusef</div>
+        <div>hasan</div>
+        <div>ali</div>
+    </div>
+
+    <anas title="my name is anas">my name is anas</anas>
+    <img src="../res/images/garden.jpg">
+    <canvas class="first"></canvas>
+    <canvas class="second"></canvas>
+    <canvas class="third"></canvas>
+</body>
+</html>

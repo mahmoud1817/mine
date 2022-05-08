@@ -1,0 +1,13 @@
+{
+    "manifest_version":2,
+    "name":"mything",
+    "version":"1.0",
+    "description": "something",
+    "icons":{
+        "128":"icon128.png"
+    },
+    "browser_action":{
+        "default_icon" :"icon128.png",
+        "default_popup":"thing.html"
+    }
+}
